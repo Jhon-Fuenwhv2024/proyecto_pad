@@ -1,0 +1,228 @@
+{
+  "productos": [
+    {
+      "id_producto": 135,
+      "marca": "Samsung",
+      "modelo": "Galaxy Book Pro",
+      "especificaciones": "Intel Core i7 11th Gen, 16GB RAM, 512GB SSD",
+      "precio_unitario": 2950000.00,
+      "stock_actual": 8
+    },
+    {
+      "id_producto": 136,
+      "marca": "Microsoft",
+      "modelo": "Surface Laptop 5",
+      "especificaciones": "Intel Core i5 12th Gen, 8GB RAM, 512GB SSD",
+      "precio_unitario": 3100000.00,
+      "stock_actual": 6
+    },
+    {
+      "id_producto": 137,
+      "marca": "Razer",
+      "modelo": "Blade 14",
+      "especificaciones": "AMD Ryzen 9 5900HX, 16GB RAM, 1TB SSD, RTX 3080",
+      "precio_unitario": 5200000.00,
+      "stock_actual": 3
+    },
+    {
+      "id_producto": 138,
+      "marca": "LG",
+      "modelo": "Gram 16",
+      "especificaciones": "Intel Core i7 11th Gen, 16GB RAM, 512GB SSD",
+      "precio_unitario": 2800000.00,
+      "stock_actual": 7
+    },
+    {
+      "id_producto": 139,
+      "marca": "Lenovo",
+      "modelo": "Legion 7i",
+      "especificaciones": "Intel Core i9 11th Gen, 32GB RAM, 1TB SSD, RTX 3080",
+      "precio_unitario": 6500000.00,
+      "stock_actual": 2
+    },
+    {
+      "id_producto": 140,
+      "marca": "Sony",
+      "modelo": "VAIO SX14",
+      "especificaciones": "Intel Core i7 11th Gen, 16GB RAM, 512GB SSD",
+      "precio_unitario": 3400000.00,
+      "stock_actual": 5
+    },
+    {
+      "id_producto": 141,
+      "marca": "Asus",
+      "modelo": "Vivobook Pro",
+      "especificaciones": "AMD Ryzen 7 5800H, 16GB RAM, 512GB SSD",
+      "precio_unitario": 2600000.00,
+      "stock_actual": 9
+    },
+    {
+      "id_producto": 142,
+      "marca": "HP",
+      "modelo": "Pavilion 15",
+      "especificaciones": "Intel Core i5 11th Gen, 8GB RAM, 256GB SSD",
+      "precio_unitario": 1800000.00,
+      "stock_actual": 14
+    },
+    {
+      "id_producto": 143,
+      "marca": "Dell",
+      "modelo": "Inspiron 16",
+      "especificaciones": "Intel Core i7 11th Gen, 16GB RAM, 512GB SSD",
+      "precio_unitario": 2400000.00,
+      "stock_actual": 11
+    },
+    {
+      "id_producto": 144,
+      "marca": "Apple",
+      "modelo": "MacBook Pro 14",
+      "especificaciones": "Apple M1 Pro, 16GB RAM, 512GB SSD",
+      "precio_unitario": 7200000.00,
+      "stock_actual": 4
+    }
+  ],
+  "clientes": [
+    {
+      "id_cliente": 234,
+      "nombre": "Tech Solutions Colombia",
+      "segmento_cliente": "Corporativo",
+      "ciudad_envio": "Bogotá"
+    },
+    {
+      "id_cliente": 235,
+      "nombre": "Carlos Mendoza",
+      "segmento_cliente": "Usuario Final",
+      "ciudad_envio": "Cali"
+    },
+    {
+      "id_cliente": 236,
+      "nombre": "Distribuidora Andina",
+      "segmento_cliente": "Corporativo",
+      "ciudad_envio": "Medellín"
+    },
+    {
+      "id_cliente": 237,
+      "nombre": "Laura García",
+      "segmento_cliente": "Usuario Final",
+      "ciudad_envio": "Barranquilla"
+    },
+    {
+      "id_cliente": 238,
+      "nombre": "Grupo Financiero Pacifico",
+      "segmento_cliente": "Corporativo",
+      "ciudad_envio": "Cartagena"
+    },
+    {
+      "id_cliente": 239,
+      "nombre": "Juan Carlos Parra",
+      "segmento_cliente": "Usuario Final",
+      "ciudad_envio": "Cúcuta"
+    },
+    {
+      "id_cliente": 240,
+      "nombre": "Empresa Logística Express",
+      "segmento_cliente": "Corporativo",
+      "ciudad_envio": "Armenia"
+    },
+    {
+      "id_cliente": 241,
+      "nombre": "María Fernanda López",
+      "segmento_cliente": "Usuario Final",
+      "ciudad_envio": "Bucaramanga"
+    },
+    {
+      "id_cliente": 242,
+      "nombre": "Constructora Moderna S.A.",
+      "segmento_cliente": "Corporativo",
+      "ciudad_envio": "Villavicencio"
+    },
+    {
+      "id_cliente": 243,
+      "nombre": "Roberto Sánchez",
+      "segmento_cliente": "Usuario Final",
+      "ciudad_envio": "Pasto"
+    }
+  ],
+  "ventas": [
+    {
+      "id_venta": 3035,
+      "fecha_venta": "2024-02-01",
+      "id_producto": 135,
+      "id_cliente": 234,
+      "cantidad_vendida": 5,
+      "precio_total": 14750000.00
+    },
+    {
+      "id_venta": 3036,
+      "fecha_venta": "2024-02-03",
+      "id_producto": 140,
+      "id_cliente": 236,
+      "cantidad_vendida": 2,
+      "precio_total": 6800000.00
+    },
+    {
+      "id_venta": 3037,
+      "fecha_venta": "2024-02-05",
+      "id_producto": 137,
+      "id_cliente": 235,
+      "cantidad_vendida": 1,
+      "precio_total": 5200000.00
+    },
+    {
+      "id_venta": 3038,
+      "fecha_venta": "2024-02-07",
+      "id_producto": 142,
+      "id_cliente": 238,
+      "cantidad_vendida": 8,
+      "precio_total": 14400000.00
+    },
+    {
+      "id_venta": 3039,
+      "fecha_venta": "2024-02-10",
+      "id_producto": 144,
+      "id_cliente": 240,
+      "cantidad_vendida": 1,
+      "precio_total": 7200000.00
+    },
+    {
+      "id_venta": 3040,
+      "fecha_venta": "2024-02-12",
+      "id_producto": 136,
+      "id_cliente": 237,
+      "cantidad_vendida": 3,
+      "precio_total": 9300000.00
+    },
+    {
+      "id_venta": 3041,
+      "fecha_venta": "2024-02-15",
+      "id_producto": 139,
+      "id_cliente": 242,
+      "cantidad_vendida": 1,
+      "precio_total": 6500000.00
+    },
+    {
+      "id_venta": 3042,
+      "fecha_venta": "2024-02-18",
+      "id_producto": 141,
+      "id_cliente": 239,
+      "cantidad_vendida": 2,
+      "precio_total": 5200000.00
+    },
+    {
+      "id_venta": 3043,
+      "fecha_venta": "2024-02-20",
+      "id_producto": 143,
+      "id_cliente": 243,
+      "cantidad_vendida": 1,
+      "precio_total": 2400000.00
+    },
+    {
+      "id_venta": 3044,
+      "fecha_venta": "2024-02-22",
+      "id_producto": 138,
+      "id_cliente": 241,
+      "cantidad_vendida": 2,
+      "precio_total": 5600000.00
+    }
+  ]
+}
