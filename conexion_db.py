@@ -4,9 +4,7 @@ from mysql.connector import Error
 class BaseDatosFCTech:
     """
     Clase para gestionar las operaciones de la base de datos de FC TECH.
-    Sigue el paradigma de Programación Orientada a Objetos (POO).
     """
-
     def __init__(self, host, usuario, password, base_datos):
         # Constructor: Inicializa los atributos de la clase
         self.host = host
