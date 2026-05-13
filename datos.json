@@ -5,7 +5,7 @@
       "marca": "Samsung",
       "modelo": "Galaxy Book Pro",
       "especificaciones": "Intel Core i7 11th Gen, 16GB RAM, 512GB SSD",
-      "precio_unitario": 2950000.00,
+      "precio_unitario": 2950000.0,
       "stock_actual": 8
     },
     {
@@ -13,7 +13,7 @@
       "marca": "Microsoft",
       "modelo": "Surface Laptop 5",
       "especificaciones": "Intel Core i5 12th Gen, 8GB RAM, 512GB SSD",
-      "precio_unitario": 3100000.00,
+      "precio_unitario": 3100000.0,
       "stock_actual": 6
     },
     {
@@ -21,7 +21,7 @@
       "marca": "Razer",
       "modelo": "Blade 14",
       "especificaciones": "AMD Ryzen 9 5900HX, 16GB RAM, 1TB SSD, RTX 3080",
-      "precio_unitario": 5200000.00,
+      "precio_unitario": 5200000.0,
       "stock_actual": 3
     },
     {
@@ -29,7 +29,7 @@
       "marca": "LG",
       "modelo": "Gram 16",
       "especificaciones": "Intel Core i7 11th Gen, 16GB RAM, 512GB SSD",
-      "precio_unitario": 2800000.00,
+      "precio_unitario": 2800000.0,
       "stock_actual": 7
     },
     {
@@ -37,7 +37,7 @@
       "marca": "Lenovo",
       "modelo": "Legion 7i",
       "especificaciones": "Intel Core i9 11th Gen, 32GB RAM, 1TB SSD, RTX 3080",
-      "precio_unitario": 6500000.00,
+      "precio_unitario": 6500000.0,
       "stock_actual": 2
     },
     {
@@ -45,7 +45,7 @@
       "marca": "Sony",
       "modelo": "VAIO SX14",
       "especificaciones": "Intel Core i7 11th Gen, 16GB RAM, 512GB SSD",
-      "precio_unitario": 3400000.00,
+      "precio_unitario": 3400000.0,
       "stock_actual": 5
     },
     {
@@ -53,7 +53,7 @@
       "marca": "Asus",
       "modelo": "Vivobook Pro",
       "especificaciones": "AMD Ryzen 7 5800H, 16GB RAM, 512GB SSD",
-      "precio_unitario": 2600000.00,
+      "precio_unitario": 2600000.0,
       "stock_actual": 9
     },
     {
@@ -61,7 +61,7 @@
       "marca": "HP",
       "modelo": "Pavilion 15",
       "especificaciones": "Intel Core i5 11th Gen, 8GB RAM, 256GB SSD",
-      "precio_unitario": 1800000.00,
+      "precio_unitario": 1800000.0,
       "stock_actual": 14
     },
     {
@@ -69,7 +69,7 @@
       "marca": "Dell",
       "modelo": "Inspiron 16",
       "especificaciones": "Intel Core i7 11th Gen, 16GB RAM, 512GB SSD",
-      "precio_unitario": 2400000.00,
+      "precio_unitario": 2400000.0,
       "stock_actual": 11
     },
     {
@@ -77,8 +77,40 @@
       "marca": "Apple",
       "modelo": "MacBook Pro 14",
       "especificaciones": "Apple M1 Pro, 16GB RAM, 512GB SSD",
-      "precio_unitario": 7200000.00,
+      "precio_unitario": 7200000.0,
       "stock_actual": 4
+    },
+    {
+      "id_producto": 145,
+      "marca": "Computador",
+      "modelo": "Computador Portátil HP EliteBook x360 830 G8 13\"",
+      "especificaciones": "Ref. Competencia (Web Scraping)",
+      "precio_unitario": 1799900.0,
+      "stock_actual": 0
+    },
+    {
+      "id_producto": 146,
+      "marca": "Computador",
+      "modelo": "Computador de Escritorio Dell OptiPlex 7090 Micro ",
+      "especificaciones": "Ref. Competencia (Web Scraping)",
+      "precio_unitario": 1199900.0,
+      "stock_actual": 0
+    },
+    {
+      "id_producto": 147,
+      "marca": "Computador",
+      "modelo": "Computador de Escritorio Dell OptiPlex 7000 Micro ",
+      "especificaciones": "Ref. Competencia (Web Scraping)",
+      "precio_unitario": 1469900.0,
+      "stock_actual": 0
+    },
+    {
+      "id_producto": 148,
+      "marca": "Computador",
+      "modelo": "Computador Portátil Dell Latitude 5330 13\"",
+      "especificaciones": "Ref. Competencia (Web Scraping)",
+      "precio_unitario": 1469900.0,
+      "stock_actual": 0
     }
   ],
   "clientes": [
@@ -150,7 +182,7 @@
       "id_producto": 135,
       "id_cliente": 234,
       "cantidad_vendida": 5,
-      "precio_total": 14750000.00
+      "precio_total": 14750000.0
     },
     {
       "id_venta": 3036,
@@ -158,7 +190,7 @@
       "id_producto": 140,
       "id_cliente": 236,
       "cantidad_vendida": 2,
-      "precio_total": 6800000.00
+      "precio_total": 6800000.0
     },
     {
       "id_venta": 3037,
@@ -166,7 +198,7 @@
       "id_producto": 137,
       "id_cliente": 235,
       "cantidad_vendida": 1,
-      "precio_total": 5200000.00
+      "precio_total": 5200000.0
     },
     {
       "id_venta": 3038,
@@ -174,7 +206,7 @@
       "id_producto": 142,
       "id_cliente": 238,
       "cantidad_vendida": 8,
-      "precio_total": 14400000.00
+      "precio_total": 14400000.0
     },
     {
       "id_venta": 3039,
@@ -182,7 +214,7 @@
       "id_producto": 144,
       "id_cliente": 240,
       "cantidad_vendida": 1,
-      "precio_total": 7200000.00
+      "precio_total": 7200000.0
     },
     {
       "id_venta": 3040,
@@ -190,7 +222,7 @@
       "id_producto": 136,
       "id_cliente": 237,
       "cantidad_vendida": 3,
-      "precio_total": 9300000.00
+      "precio_total": 9300000.0
     },
     {
       "id_venta": 3041,
@@ -198,7 +230,7 @@
       "id_producto": 139,
       "id_cliente": 242,
       "cantidad_vendida": 1,
-      "precio_total": 6500000.00
+      "precio_total": 6500000.0
     },
     {
       "id_venta": 3042,
@@ -206,7 +238,7 @@
       "id_producto": 141,
       "id_cliente": 239,
       "cantidad_vendida": 2,
-      "precio_total": 5200000.00
+      "precio_total": 5200000.0
     },
     {
       "id_venta": 3043,
@@ -214,7 +246,7 @@
       "id_producto": 143,
       "id_cliente": 243,
       "cantidad_vendida": 1,
-      "precio_total": 2400000.00
+      "precio_total": 2400000.0
     },
     {
       "id_venta": 3044,
@@ -222,7 +254,7 @@
       "id_producto": 138,
       "id_cliente": 241,
       "cantidad_vendida": 2,
-      "precio_total": 5600000.00
+      "precio_total": 5600000.0
     }
   ]
 }

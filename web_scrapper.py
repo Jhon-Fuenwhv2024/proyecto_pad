@@ -1,7 +1,8 @@
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 import time
-from conexion_db import BaseDatosFCTech
+import json
+import os
 
 class ScraperCompetencia:
     """
@@ -16,6 +17,7 @@ class ScraperCompetencia:
         Fase 3: Preparación de Datos (Extracción).
         Busca un término y extrae título y precio de los primeros resultados.
         Usa Playwright para renderizar JavaScript (VTEX).
+        Retorna diccionarios compatibles con datos.json
         """
         # Construir URL de búsqueda para VTEX
         url_busqueda = f"{self.base_url}?busca={termino_busqueda.replace(' ', '+')}"
@@ -68,6 +70,9 @@ class ScraperCompetencia:
                 print(f"   Analizando {len(elementos_precio)} elementos...")
                 return []
 
+            # Obtener el próximo ID disponible
+            id_producto_actual = self.obtener_proximo_id_producto()
+
             for item in resultados:
                 try:
                     # Extraer título
@@ -90,15 +95,17 @@ class ScraperCompetencia:
                         marca_inferida = titulo.split()[0] if titulo else "Genérica"
                         modelo_truncado = titulo[:50]
                         
-                        tupla_producto = (
-                            None,
-                            marca_inferida,
-                            modelo_truncado,
-                            "Ref. Competencia (Web Scraping)",
-                            precio_limpio,
-                            0
-                        )
-                        datos_extraidos.append(tupla_producto)
+                        # Crear diccionario (compatible con JSON)
+                        producto_dict = {
+                            "id_producto": id_producto_actual,
+                            "marca": marca_inferida,
+                            "modelo": modelo_truncado,
+                            "especificaciones": "Revisar página para detalles completos",
+                            "precio_unitario": precio_limpio,
+                            "stock_actual": 0
+                        }
+                        datos_extraidos.append(producto_dict)
+                        id_producto_actual += 1
                 
                 except Exception as e:
                     print(f"⚠️ Error procesando producto: {e}")
@@ -112,6 +119,48 @@ class ScraperCompetencia:
              import traceback
              traceback.print_exc()
              return []
+
+    def obtener_proximo_id_producto(self):
+        """
+        Lee datos.json y retorna el próximo ID disponible para productos.
+        """
+        try:
+            if os.path.exists('datos.json'):
+                with open('datos.json', 'r', encoding='utf-8') as f:
+                    datos = json.load(f)
+                    if datos.get('productos'):
+                        max_id = max(p['id_producto'] for p in datos['productos'])
+                        return max_id + 1
+        except Exception as e:
+            print(f"⚠️ Advertencia al leer IDs: {e}")
+        
+        return 145  # ID por defecto si no hay datos
+
+    def guardar_en_json(self, productos):
+        """
+        Guarda los productos scrapeados en datos.json, manteniendo estructura.
+        """
+        try:
+            # Leer datos existentes o crear estructura base
+            if os.path.exists('datos.json'):
+                with open('datos.json', 'r', encoding='utf-8') as f:
+                    datos = json.load(f)
+            else:
+                datos = {"productos": [], "clientes": [], "ventas": []}
+            
+            # Agregar nuevos productos
+            datos['productos'].extend(productos)
+            
+            # Guardar actualizado
+            with open('datos.json', 'w', encoding='utf-8') as f:
+                json.dump(datos, f, indent=2, ensure_ascii=False)
+            
+            print(f"✅ {len(productos)} productos guardados en 'datos.json'")
+            return True
+        
+        except Exception as e:
+            print(f"❌ Error al guardar JSON: {e}")
+            return False
 
 # --- FLUJO PRINCIPAL ---
 if __name__ == "__main__":
@@ -131,21 +180,17 @@ if __name__ == "__main__":
     if datos:
         print("\n📊 Muestra de datos limpios listos para Base de Datos:")
         for idx, d in enumerate(datos[:3]): # Mostrar solo los 3 primeros
-            print(f"  {idx+1}. Marca: {d[1]} | Modelo: {d[2]} | Precio: ${d[4]}")
+            print(f"  {idx+1}. Marca: {d['marca']} | Modelo: {d['modelo']} | Precio: ${d['precio_unitario']}")
             
-        print("\n⏳ Iniciando proceso de carga a MySQL...")
+        print("\n💾 Guardando datos en 'datos.json'...\n")
         
-        # 4. Integración Fase 4 (Carga a Base de Datos)
-        db = BaseDatosFCTech('localhost', 'root', '', 'fctech_db')
-        db.conectar()
-        
-        if db.conexion and db.conexion.is_connected():
-            # Definir columnas de destino
-            columnas_destino = "id_producto, marca, modelo, especificaciones, precio_unitario, stock_actual"
-            
-            # Ejecutar inserción en lote (Batch Insert)
-            db.insertar_lote("dim_productos", columnas_destino, datos)
-            
-            db.desconectar()
+        # 4. Guardar en JSON
+        if scraper.guardar_en_json(datos):
+            print("✅ Proceso completado exitosamente.")
+            print("\n📝 Próximo paso:")
+            print("   Ejecuta: python insertar_datos.py")
+            print("   para insertar estos datos en la base de datos MySQL.")
+        else:
+            print("❌ No se pudieron guardar los datos en JSON.")
     else:
-        print("\n❌ No se obtuvieron datos para insertar.")
+        print("\n❌ No se obtuvieron datos para guardar.")
