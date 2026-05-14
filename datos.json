@@ -81,36 +81,36 @@
       "stock_actual": 4
     },
     {
-      "id_producto": 145,
+      "id_producto": 149,
       "marca": "Computador",
       "modelo": "Computador Portátil HP EliteBook x360 830 G8 13\"",
-      "especificaciones": "Ref. Competencia (Web Scraping)",
+      "especificaciones": "Revisar página para detalles completos",
       "precio_unitario": 1799900.0,
-      "stock_actual": 0
+      "stock_actual": 23
     },
     {
-      "id_producto": 146,
+      "id_producto": 150,
       "marca": "Computador",
       "modelo": "Computador de Escritorio Dell OptiPlex 7090 Micro ",
-      "especificaciones": "Ref. Competencia (Web Scraping)",
+      "especificaciones": "Revisar página para detalles completos",
       "precio_unitario": 1199900.0,
-      "stock_actual": 0
+      "stock_actual": 3
     },
     {
-      "id_producto": 147,
+      "id_producto": 151,
       "marca": "Computador",
       "modelo": "Computador de Escritorio Dell OptiPlex 7000 Micro ",
-      "especificaciones": "Ref. Competencia (Web Scraping)",
+      "especificaciones": "Revisar página para detalles completos",
       "precio_unitario": 1469900.0,
-      "stock_actual": 0
+      "stock_actual": 11
     },
     {
-      "id_producto": 148,
+      "id_producto": 152,
       "marca": "Computador",
       "modelo": "Computador Portátil Dell Latitude 5330 13\"",
-      "especificaciones": "Ref. Competencia (Web Scraping)",
+      "especificaciones": "Revisar página para detalles completos",
       "precio_unitario": 1469900.0,
-      "stock_actual": 0
+      "stock_actual": 23
     }
   ],
   "clientes": [

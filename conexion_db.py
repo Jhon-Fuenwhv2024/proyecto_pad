@@ -44,7 +44,7 @@ class BaseDatosFCTech:
         try:
             # Generar los comodines (%s, %s, %s...) según la cantidad de columnas
             placeholders = ", ".join(["%s"] * len(columnas.split(",")))
-            query = f"INSERT INTO {tabla} ({columnas}) VALUES ({placeholders})"
+            query = f"INSERT IGNORE INTO {tabla} ({columnas}) VALUES ({placeholders})"
             
             self.cursor.executemany(query, datos)
             self.conexion.commit()
